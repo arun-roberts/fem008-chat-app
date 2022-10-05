@@ -19,11 +19,13 @@
         <section class='phone center'>
             <div>
                 <header>
-                    <div>
+                    <div class='header-container'>
                         <div class='deets'>
                             <img src="./images/avatar.jpg" alt="">
-                            <h2>Samuel Green</h2>
-                            <h3>Available to Walk</h3>
+                            <div class='recipient-name'>
+                                <h2>Samuel Green</h2>
+                                <h3>Available to Walk</h3>
+                            </div>
                         </div>
                         <ul class='dots'>
                             <li></li>
@@ -32,21 +34,21 @@
                         </ul>
                     </div>
                 </header>
-                <div>
-                    <ul class='chat'>
-                        <li class='left'>That sounds great. I’d be happy with that.</li>
-                        <li class='left'>Could you send over some pictures of your dog, please?</li>
-                        <li class='right'>
-                            <ul>
+                <div class='chat'>
+                    <ul class='chat-contents'>
+                        <li class='bubble left'>That sounds great. I’d be happy with that.</li>
+                        <li class='bubble left'>Could you send over some pictures of your dog, please?</li>
+                        <li class='bubble right'>
+                            <ul class='chat-images'>
                                 <li><img src="./images/dog-image-1.jpg" alt=""></li>
                                 <li><img src="./images/dog-image-2.jpg" alt=""></li>
                                 <li><img src="./images/dog-image-3.jpg" alt=""></li>
                             </ul>
                         </li>
-                        <li class='right'>Here are a few pictures. She’s a happy girl!</li>
-                        <li class='right'>Can you make it?</li>
-                        <li class='left'>She looks so happy! The time we discussed works. How long shall I take her out for?</li>
-                        <li class='left radio'>
+                        <li class='bubble right'>Here are a few pictures. She’s a happy girl!</li>
+                        <li class='bubble right'>Can you make it?</li>
+                        <li class='bubble left'>She looks so happy! The time we discussed works. How long shall I take her out for?</li>
+                        <li class='bubble left radio'>
                             <div class='duration'>
                                 30 minute walk
                             </div>
@@ -54,7 +56,7 @@
                                 $29
                             </div> 
                         </li>
-                        <li class='left radio'>
+                        <li class='bubble left radio'>
                             <div class='duration'>
                                 1 hour walk
                             </div>

@@ -75,11 +75,12 @@ header {
     padding: 1.875em 1.03125em 0.75em 0.96875em;
 }
 
-.header div {
+.header-container {
     width: 12.25em;
     height: 1.5em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .dots {
@@ -99,13 +100,19 @@ header {
 .deets {
     width: 6.625em;
     height: 1.5em;
-    display: grid;
+    display: flex;
+    align-items: center;
 }
 
 .deets img {
     height: 1.5em;
     aspect-ratio: 1;
     border-radius: 50%;
+}
+
+.recipient-name {
+    display: flex;
+    flex-direction: column;
 }
 
 .deets h2 {
@@ -120,24 +127,58 @@ header {
     color: hsl(276, 100%, 81%);
 }
 
-.chat img {
+.chat {
+    background-color: #F2F2F2;
+    border-radius: 0.5em;
+    padding: 0.4em;
+}
+
+.chat-contents {
+    display: flex;
+    flex-direction: column;
+    height: 23em;
+}
+
+.chat-contents img {
     width: 2.5em;
     height: 2.5em;
 }
 
+.bubble {
+    border-radius: 1em;
+    font-size: 0.8em;
+    margin-bottom: 0.2em;
+    padding: 0.3em;
+}
+
 .left {
     color: hsl(276, 55%, 52%);
-    background-color: #EEE5F4;;
+    background-color: #EEE5F4;
+    align-self: flex-start;
+    margin-right: 5em;
 }
 
 .right {
     color: hsl(271, 15%, 43%);
+    background-color: white;
+    align-self: flex-end;
+    margin-left: 5em;
+}
+
+.chat-images {
+    display: flex
 }
 
 .radio {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.input {
+    background-color: white;
+    padding: 0.3em;
+    border-radius: 0.5em;
 }
 
 .text {
