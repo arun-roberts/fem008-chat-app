@@ -17,9 +17,12 @@
 <body>
     <main>
         <section class='phone center'>
-            <div>
+            <div class='phone-display'>
                 <header>
                     <div class='header-container'>
+                        <svg width="4" height="10" viewBox="0 0 4 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.10557 0.552792C2.35256 0.0588133 2.95324 -0.141411 3.44721 0.105578C3.90591 0.334925 4.11131 0.869235 3.94056 1.3399L3.89443 1.44722L2.118 5.00001L3.89443 8.55279C4.12377 9.01149 3.96751 9.56218 3.54851 9.83626L3.44721 9.89443C2.98852 10.1238 2.43783 9.96752 2.16374 9.54852L2.10557 9.44722L0.105573 5.44722C-0.0150818 5.20591 -0.0323182 4.92798 0.0538637 4.67621L0.105573 4.55279L2.10557 0.552792Z" fill="white"/>
+                        </svg>
                         <div class='deets'>
                             <img src="./images/avatar.jpg" alt="">
                             <div class='recipient-name'>
@@ -36,49 +39,62 @@
                 </header>
                 <div class='chat'>
                     <ul class='chat-contents'>
-                        <li class='bubble-group'>
-                            <ul class='left-bubble'>
-                                <li class='bubble left'>That sounds great. I’d be happy with that.</li>
-                                <li class='bubble left'>Could you send over some pictures of your dog, please?</li>
+                        <li>
+                            <ul class='bubbles'>
+                                <li class='bubble left max'>That sounds great. I’d be happy with that.</li>
+                                <li class='bubble left max'>Could you send over some pictures of your dog, please?</li>
                             </ul>
                         </li>
-                        <li class='bubble-group'>
-                            <ul class='right-bubble'>
-                                <li class='bubble right'>
+                        <li>
+                            <ul class='bubbles bubbles-right'>
+                                <li class='bubble image-bubble'>
                                     <ul class='chat-images'>
                                         <li><img src="./images/dog-image-1.jpg" alt=""></li>
                                         <li><img src="./images/dog-image-2.jpg" alt=""></li>
                                         <li><img src="./images/dog-image-3.jpg" alt=""></li>
                                     </ul>
                                 </li>
-                                <li class='bubble right'>Here are a few pictures. She’s a happy girl!</li>
+                                <li class='bubble right max'>Here are a few pictures. She’s a happy girl!</li>
                                 <li class='bubble right'>Can you make it?</li>
                             </ul>
                         </li>
-                        <li class='bubble-group'>
-                            <ul>
-                                <li class='bubble left'>She looks so happy! The time we discussed works. How long shall I take her out for?</li>
-                                <li class='left radio'>
-                                    <div class='duration'>
-                                        30 minute walk
-                                    </div>
-                                    <div class='cost'>
-                                        $29
-                                    </div> 
+                        <li>
+                            <ul class='bubbles'>
+                                <li class='bubble left max'>She looks so happy! The time we discussed works. How long shall I take her out for?</li>
+                                <li class='radio'>
+                                        <div class='selection'></div>
+                                        <div class='radio-info'>
+                                            <div class='duration'>
+                                                30 minute walk
+                                            </div>
+                                            <div class='cost'>
+                                                $29
+                                            </div> 
+                                        </div>
                                 </li>
-                                <li class='left radio'>
-                                    <div class='duration'>
-                                        1 hour walk
-                                    </div>
-                                    <div class='cost'>
-                                        $49
+                                <li class='radio'>
+                                    <div class='selection'></div>
+                                    <div class='radio-info'>
+                                        <div class='duration'>
+                                            1 hour walk
+                                        </div>
+                                        <div class='cost'>
+                                            $49
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
                         </li>
                     </ul>
                     <div class='input'>
-                        Type a message…
+                        <p>
+                            Type a message…
+                        </p>
+                        <button>
+                            <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.06419 0.465024C1.50167 0.0284666 2.19006 -0.00511479 2.66614 0.36428L2.78047 0.465024L6.42125 4.09812C6.85873 4.53467 6.89238 5.22161 6.52221 5.69669L6.42125 5.81077L2.78047 9.44387C2.30653 9.9168 1.53813 9.9168 1.06419 9.44387C0.626713 9.00731 0.59306 8.32038 0.963236 7.8453L1.06419 7.73121L3.84588 4.95445L1.06419 2.17768C0.626713 1.74112 0.59306 1.05419 0.963236 0.579112L1.06419 0.465024Z" fill="white"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
