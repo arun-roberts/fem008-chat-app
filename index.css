@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
 
 :root {
-    --pale-violet: hsl(276, 100%, 81%);
-    --mod-violet: hsl(276, 55%, 52%);
     font-family: 'Rubik', sans-serif;
 }
 
@@ -14,11 +12,7 @@
 
 html, body {
     width: 100%;
-    height: 100%;
-}
-
-body {
-    overflow: hidden;
+    min-height: 100%;
 }
 
 h1 {
@@ -32,21 +26,42 @@ p {
 
 main {
     position: relative;
+    overflow: hidden;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     background-color: #F2F2F2;
-    
+    z-index: 2;
 }
 
 main::before {
+    position: absolute;
     content: '';
+    width: 31.875em;
+    height: 63.625em;
+    background: linear-gradient(225deg, #E844FF 0%, #8739FF 100%);
+    border-radius: 15.9375em;
+    top: -31.8125em;
+    left: -20.125em;
 }
 
 main::after {
     content: '';
+    position: absolute;
+    width: 31.875em;
+    height: 63.625em;
+    left: 11.75em;
+    top: 26.6875em;
+    background: linear-gradient(225deg, #E844FF 0%, #8739FF 100%);
+    mix-blend-mode: normal;
+    opacity: 0.03;
+    border-radius: 15.9375em;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    z-index: -1;
+
 }
 
 li {
@@ -62,24 +77,41 @@ li {
 }
 
 .phone {
+    position: relative;
     width: 15.4375em;
     height: 31.5625em;
     background-color: hsl(0, 0%, 100%);
-    border-radius: 30px;
+    border-radius: 1.875em;
+    box-shadow: 0px 1.875em 3.75em -0.625em rgba(62, 39, 83, 0.251202);
     padding: 0.6875em 0.59375em;
+    margin: 4em auto;
+}
+
+.phone::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    translate: -50%;
+    width: 8.0625em;
+    height: 1.8125em;
+    background: #FFFFFF;
+    border-radius: 0px 0px 0.875em 0.875em;
 }
 
 .phone-display {
+    width: 100%;
     height: 100%;
     background-color: #F2F2F2;
-    border-radius: 20px;
+    border-radius: 1.25em;
+    box-shadow: 0 0 0 0.0625em #F2F2F2;
 }
 
 header {
     width: 14.25em;
     height: 4.125em;
-    box-shadow: 0px 0px 13px rgba(62, 39, 83, 0.251202);
-    border-radius: 20px 20px 6px 6px;
+    box-shadow: 0px 1px 2px rgba(62, 39, 83, 0.1), 0px 3px 3px rgba(62, 39, 83, 0.09), 0px 6px 9px rgba(62, 39, 83, 0.05);
+    border-radius: 1.25em 1.25em 0.375em 0.375em;
     background: linear-gradient(225deg, #E844FF 0%, #8739FF 100%);
     padding: 1.875em 1.03125em 0.75em 0.96875em;
     padding: 2em 1.03125em 0.75em 0.96875em;
@@ -116,30 +148,38 @@ header {
 
 .deets img {
     height: 1.5em;
-    aspect-ratio: 1;
+    width: 1.5em;
     border-radius: 50%;
-    border: 1px solid white;
+    border: 0.0625em solid white;
+    margin-right: 0.5em;
 }
 
 .recipient-name {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .recipient-name h2 {
     display: inline-block;
+    font-weight: 500;
     font-size: 0.6875em;
+    line-height: 1.1818181818182em;
     color:hsl(0, 0%, 100%);
 }
 
 .deets h3 {
     display: inline-block;
     font-size: 0.5em;
+    line-height: 1.125em;
+    font-weight: 400;
     color: hsl(276, 100%, 81%);
+    margin-top: 0.125em;
 }
 
 .chat {
     width: 14.25em;
+    height: 100%;
     border-radius: 0.5em;
     padding: 0.46875em;
 }
@@ -148,7 +188,6 @@ header {
     display: grid;
     gap: 0.5em;
     width: 100%;
-    /* height: 23em; */
 }
 
 .chat-contents img {
@@ -185,6 +224,7 @@ header {
     background-color: white;
     border-radius: 0.625em 0.625em 0.25em 0.625em;
     text-align: right;
+    box-shadow: 0px 10px 5px -5px rgba(62, 39, 83, 0.045318);
 }
 
 .max {
@@ -215,7 +255,7 @@ header {
     color: white;
     background: linear-gradient(135deg, #E844FF 0%, #8739FF 100%);
     box-shadow: 0px 10px 5px -5px rgba(62, 39, 83, 0.045318);
-    border-radius: 10px 10px 10px 4px;
+    border-radius: 0.625em 0.625em 0.625em 0.25em;
     padding: 0 1em 0 0.5em;
     margin-bottom: 0.5em;
 }
@@ -261,6 +301,10 @@ header {
 
 .input p {
     font-size: 0.5625em;
+    letter-spacing: -0.0703125px;
+    font-weight: 300;
+    line-height: 1.2222222222em;
+    margin-top: 0.356666666667em;
 }
 
 .input button {
@@ -279,8 +323,135 @@ header {
 .text {
     width: 19.4375em;
     height: 14.9375em;
+    margin-bottom: 4em;
+}
+
+h1 {
+    font-size: 2.5em;
+    line-height: 1.175em;
+    font-weight: 500;
+    text-align: center;
+    color:hsl(271, 36%, 24%);
+}
+
+.text p {
+    font-size: 1em;
+    line-height: 1.75em;
+    font-weight: 300;
+    text-align: center;
+    color: #A39DA9;
+    margin-top: 1.5em;
 }
 
 .attribution {
     position: absolute;
+}
+
+@media screen and ( min-width: 600px ) {
+    html, body, main { 
+        min-height: 100vh;
+    }
+
+    main::before {
+        left: -12em;
+    }
+
+    main::after {
+        left: 25em;
+    }
+}
+
+@media screen and ( min-width: 800px ) {
+    main::before {
+        left: -9em;
+    }
+
+    main::after {
+        left: 40em;
+    }
+}
+
+
+@media screen and ( min-width: 1200px ) {
+    body, html {
+        height: 100%;
+    }
+
+    main {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100vw;
+        padding-left: 6.4375em;
+    }
+
+    main::before {
+        top: -19.875em;
+        left: -5.625em;
+    }
+
+    main::after {
+        top: 7.4375em;
+        left: 55em;
+    }
+
+    .phone {
+        margin: 0 7.8125em 0 0;
+    }
+    
+    .text {
+        width: 27.8125em;
+        height: 11.4375em;
+        margin: 0;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    .text p {
+        font-weight: 400;
+        text-align: left;
+    }
+}
+
+@media screen and ( min-width: 1400px ) {
+    main::before {
+        left: -5.625em;
+    }
+
+    main::after {
+        left: 69.6875em;
+    }
+}
+
+@media screen and ( min-width: 1800px ) {
+    body {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and ( min-width: 2200px ) {
+    body {
+        font-size: 1.6em;
+    }
+}
+
+@media screen and ( min-width: 2600px ) {
+    body {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and ( min-width: 3000px ) {
+    body {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and ( min-width: 3500px ) {
+    body {
+        font-size: 2.8em;
+    }
 }
